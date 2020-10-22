@@ -1,7 +1,7 @@
 
 
 class House < ApplicationRecord
-    validates :address, presense: true
+    # validates :address, presense: true
     
     has_many :residents
         primary_key: :id,
