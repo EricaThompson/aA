@@ -9,12 +9,14 @@
 #  updated_at      :datetime         not null
 #  session_token   :string           not null
 #
+require 'bcrypt'
+
 class User < ApplicationRecord
     attr_reader :password
 
     before_validation :ensure_session_token
-    validates :username, :session_token, presense: true
-    validates :password_digest, presense: { message: "Password can't be blank"}
+    validates :username, :session_token, presence: true
+    validates :password_digest, presence: { message: "Password can't be blank"}
     validates :password, length: { minimum: 6, allow_nil: true }
 
     def self.find_by_credentials(username, password)
@@ -23,7 +25,7 @@ class User < ApplicationRecord
         user.password_digest.is_password?(password) ? user : nil
     end
 
-    def self.generate_session_token
+    def generate_session_token
         return SecureRandom::urlsafe_base64
     end
 
