@@ -10,6 +10,9 @@ class UsersController < ApplicationController
       flash.now[:errors] = @user.errors.full_messages
       render :new
     end
+
+    msg = UserMailer.welcome_email(@user)
+    msg.deliver_now
   end
 
   def new
