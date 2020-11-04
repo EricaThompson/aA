@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
 
   describe 'is_password?' do
     it 'should exist?'
-      expect{is_password?(password)}.to raise
+      expect{is_password?(password)}.to 
   end
 
   desribe 'reset_session_token' do
