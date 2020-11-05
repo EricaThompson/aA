@@ -1,4 +1,3 @@
-
 require 'shoulda/matchers'
 
 Shoulda::Matchers.configure do |config|
@@ -6,4 +5,4 @@ Shoulda::Matchers.configure do |config|
         with.test_framework :rspec
         with.library :rails
     end
-End
+end
