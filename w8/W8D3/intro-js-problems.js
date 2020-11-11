@@ -81,3 +81,46 @@ isSubstring("time to program", "time")
 //true
 isSubstring("Jump for joy", "joys")
 //false
+
+
+function fizzBuzz(array) {
+    array.forEach(function (el) {
+        if((el % 3 === 0 || el % 5 === 0) && !(el % 3 === 0 && el % 5 === 0)){
+            console.log(el)
+        }
+    });
+}
+
+fizzBuzz([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+
+function isPrime(number){
+    let i = 2
+    if(number < 2){
+        return console.log(false)
+    } 
+
+    while(i < number){
+        if (number % i === 0){
+            return console.log(false)
+        }
+        i++
+    }
+
+    console.log(true)
+}
+
+isPrime(2)
+// true
+
+isPrime(10)
+// false
+
+isPrime(15485863)
+// true
+
+isPrime(3548563)
+// false
+
+function sumOfNPrimes(n) {
+
+}
