@@ -3,7 +3,11 @@ import React from "react";
 class Calculator extends React.Component {
     constructor(props) {
         super(props);
-        // your code here
+        this.state = {
+            result: 0,
+            num1: "",
+            num2: ""
+        }
     }
 
     // your code here
