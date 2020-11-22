@@ -47,15 +47,21 @@ class Calculator extends React.Component {
         const {result, num1, num2} = this.state;
 
         return (
-            <div>
-                <input onChange={this.setNum1 = this.setNum1.bind(this)} type="text" value={num1} />
-                <input onChange={this.setNum2 = this.setNum2.bind(this)} type="text" value={num2} />
-                <button onClick={this.addNums = this.addNums.bind(this)} >+</button>
-                <button onClick={this.subNums = this.subNums.bind(this)} >-</button>
-                <button onClick={this.multNums = this.multNums.bind(this)} >*</button>
-                <button onClick={this.divNums = this.divNums.bind(this)} >/</button>
-                <button onClick={this.clear = this.clear.bind(this)}> clear </button>
-                <h1>{result}</h1>
+            <div className="calc">
+                <h1>calculator</h1>
+                <div className='inputs'>
+                    <input onChange={this.setNum1 = this.setNum1.bind(this)} type="text" value={num1} />
+                    <input onChange={this.setNum2 = this.setNum2.bind(this)} type="text" value={num2} />
+                </div>
+                <br />
+                <div className="buttons">
+                    <button onClick={this.addNums = this.addNums.bind(this)} >+</button>
+                    <button onClick={this.subNums = this.subNums.bind(this)} >-</button>
+                    <button onClick={this.multNums = this.multNums.bind(this)} >*</button>
+                    <button onClick={this.divNums = this.divNums.bind(this)} >/</button>
+                    <button onClick={this.clear = this.clear.bind(this)}> clear </button>
+                </div>
+                <h2>{result}</h2>
             </div>
         );
     }
