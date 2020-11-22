@@ -20,22 +20,27 @@ class Calculator extends React.Component {
     addNums(event){
         event.preventDefault();
         const sum = parseInt(this.state.num1, 10) + parseInt(this.state.num2, 10);
-        this.setState({ result: sum})
+        this.setState({ result: sum});
     }
     subNums(event) {
         event.preventDefault();
         const sub = parseInt(this.state.num1, 10) - parseInt(this.state.num2, 10);
-        this.setState({ result: sub  })
+        this.setState({ result: sub  });
     }
     multNums(event) {
         event.preventDefault();
         const mult = parseInt(this.state.num1, 10) * parseInt(this.state.num2, 10);
-        this.setState({ result: mult })
+        this.setState({ result: mult });
     }
     divNums(event) {
         event.preventDefault();
         const div = parseInt(this.state.num1, 10) / parseInt(this.state.num2, 10);
-        this.setState({ result: div })
+        this.setState({ result: div });
+    }
+
+    clear(event){
+        event.preventDefault();
+        this.setState({ num1: "", num2: "", result: 0})
     }
 
     render() {
@@ -47,6 +52,7 @@ class Calculator extends React.Component {
                 <button onClick={this.subNums = this.subNums.bind(this)} >-</button>
                 <button onClick={this.multNums = this.multNums.bind(this)} >*</button>
                 <button onClick={this.divNums = this.divNums.bind(this)} >/</button>
+                <button onClick={this.clear = this.clear.bind(this)}> clear </button>
                 <h1>{this.state.result}</h1>
             </div>
         );
