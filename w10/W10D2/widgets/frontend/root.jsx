@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
+import Content from './content';
 
 const Root = () => {
     const array = [{title: "one", content: "I am the first"},{title: "two", content: "Second pane here"},{title: "three", content: "Third pane here"}]
@@ -13,6 +14,7 @@ const Root = () => {
         <div>
             <Clock />
             {arrayMap}
+            {/* <Content /> */}
         </div>
     )
 }

@@ -23,9 +23,32 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    
 }
 
 p {
     margin: 0;
+}
+
+h3 {
+    width: 20px;
+    
+}
+
+.tabs > ul {
+    display: flex;
+    border: 1px solid red;
+}
+
+/* article {
+    display: none;
+} */
+
+.tabs {
+    display: relative;
+}
+
+.content {
+    display: absolute;
+    top: 10;
+    left: 10;
 }
