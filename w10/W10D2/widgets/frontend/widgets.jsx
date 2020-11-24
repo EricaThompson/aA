@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Clock from './clock';
+// import Clock from './clock';
+import Root from './root';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root');
-  ReactDOM.render(<Clock />, root);
+  const main = document.getElementById('main');
+  ReactDOM.render(<Root />, main);
 })
