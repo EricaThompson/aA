@@ -7,43 +7,23 @@ class Tabs extends React.Component {
         this.state = {
             index: 0
         }
-
     }
 
-
+    changeStateIndex(index){
+        this.setState({index},()=>console.log(this.state.index))
+    }
 
     render(){
         return (
             <div>
-                <p>{this.props.title}</p>
-                <p>{this.props.content}</p>
+                <ul>
+                    <h1 onClick={()=>this.changeStateIndex(this.props.idx)}>{this.props.title}</h1>
+                    <article>{this.props.content}</article>
+                </ul>
             </div>
         )
     }
 
 }
-
-
-
-// const Tabs = ({title, content}) => {
-    
-    
-    
-    
-    
-//     return (
-//         <div>
-//             <p>{title}</p>
-//             <p>{content}</p>
-//         </div>
-//     )
-
-
-
-// }
-    // constructor(props){
-    //     super(props)
-    // }
-
 
 export default Tabs;
