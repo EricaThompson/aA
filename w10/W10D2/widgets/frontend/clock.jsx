@@ -57,19 +57,25 @@ class Clock extends React.Component {
     render() {
         return (
         <div className="clock">
-            <h1>Clock</h1>
-                <h2>Time:
+                <div className="title">
+                    <h1>Clock</h1>
+                </div>
+            
+            <div className="date-time">
+                    <h2>
+                    <p>Time:</p>
                     <p>
                         {this.with_leading_zeros(this.state.date.getHours())}:{this.with_leading_zeros(this.state.date.getMinutes())}:{this.with_leading_zeros(this.state.date.getSeconds())} PDT
                     </p>
                 </h2>
             
                 <h2>
-                    Date:
+                    <p>Date:</p>
                     <p>
                         {this.getDayOfTheWeek(this.state.date.getDay())} {this.getMonth(this.state.date.getMonth())} {this.state.date.getDate()} {this.state.date.getFullYear()}
                     </p>
                 </h2>
+            </div>
         </div>
         )
     }

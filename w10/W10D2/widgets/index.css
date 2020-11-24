@@ -1,3 +1,36 @@
+body {
+    font-size: 16px;
+
+}
+
 .clock {
     font-family: "Nerko One";
+    /* display: flex; */
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.date-time {
+    /* border: 1px solid purple; */
+    /* display: flex; */
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: space-between;
+    margin: 0;
+    
+}
+
+p {
+    margin: 0;
+    /* border: 1px solid green; */
 }
