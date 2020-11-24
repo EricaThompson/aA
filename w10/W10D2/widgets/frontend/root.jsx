@@ -13,8 +13,8 @@ const Root = () => {
     return (
         <div>
             <Clock />
-            {arrayMap}
-            {/* <Content /> */}
+            
+            <Content content={arrayMap}/>
         </div>
     )
 }
