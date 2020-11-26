@@ -4,4 +4,4 @@ export const selectLocation = (city, jobs) => ({
     jobs
 })
 
-window.selectLocation = selectLocation;
+// window.selectLocation = selectLocation;
