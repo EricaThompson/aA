@@ -1,3 +1,10 @@
 import React from 'react';
 
-export default () => <h3>Todo List goes here!</h3>
+export default ({todos}) => {
+
+    return (
+        <ul>
+            {todos.map(todo => <li>{todo.title}</li>)}
+        </ul>
+    )
+}
