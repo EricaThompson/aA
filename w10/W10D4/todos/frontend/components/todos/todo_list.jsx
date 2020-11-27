@@ -1,11 +1,13 @@
 import React from 'react';
 import TodoListItem from './todo_list_item';
+import TodoForm from './todo_form';
 
-export default ({todos}) => {
+export default (props) => {
 
     return (
         <ul>
-            {todos.map((todo,idx) => <TodoListItem todo={todo} key={idx}/>)}
+            <TodoForm receiveTodo={props.receiveTodo}/>
+            {props.todos.map((todo,idx) => <TodoListItem todo={todo} key={idx}/>)}
         </ul>
     )
 }
