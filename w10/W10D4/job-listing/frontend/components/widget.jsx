@@ -18,15 +18,17 @@ class Widget extends React.Component {
     $.ajax({
       url: `https://79vzv34gc4.execute-api.us-west-1.amazonaws.com/default/jobListings?location=${city}`,
       type: "GET",
-      success: function(resp) {
+      success: function(res) {
         // tell the store to update with the new location and jobs;
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(this.selectLocation(city, resp))
+        this.props.store.dispatch(this.selectLocation(city, res))
 
       }.bind(this)
     });
   }
+
+
 
   render() {
 
