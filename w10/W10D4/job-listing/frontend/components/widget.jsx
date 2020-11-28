@@ -1,6 +1,6 @@
 import React from 'react';
 import Job from './job';
-import { selectLocation } from './../actions';
+import selectLocation from './../actions';
 
 class Widget extends React.Component {
 
@@ -18,17 +18,15 @@ class Widget extends React.Component {
     $.ajax({
       url: `https://79vzv34gc4.execute-api.us-west-1.amazonaws.com/default/jobListings?location=${city}`,
       type: "GET",
-      success: function(res) {
+      success: function(resp) {
         // tell the store to update with the new location and jobs;
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(this.selectLocation(city, res))
+        this.props.store.dispatch(this.selectLocation(city, resp))
 
       }.bind(this)
     });
   }
-
-
 
   render() {
 
