@@ -12,5 +12,13 @@ export const receiveTodos = (todos) => {
     };
 };
 
+export const removeTodo = (todo) => {
+    return {
+        type: REMOVE_TODO,
+        todo
+    }
+}
+
 export const RECEIVE_TODO = 'RECEIVE_TODO';
 export const RECEIVE_TODOS = 'RECEIVE_TODOS';
+export const REMOVE_TODO = 'REMOVE_TODO';    
