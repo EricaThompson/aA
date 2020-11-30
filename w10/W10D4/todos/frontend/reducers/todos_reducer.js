@@ -1,4 +1,4 @@
-import {RECEIVE_TODOS, RECEIVE_TODO} from '../actions/todo_actions';
+import {RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO} from '../actions/todo_actions';
 
 const preloadedState = {
     1: {
@@ -30,7 +30,10 @@ const todosReducer = (currentState = preloadedState, action)=>{
                 nextState[todo.id] = todo;
             });
             nextState = newTodos;
-            return nextState
+            return nextState;
+        case REMOVE_TODO:
+            delete nextState[action.todo.id]
+            return nextState;
         default:
             return currentState;
     }
