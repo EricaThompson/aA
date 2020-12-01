@@ -3,5 +3,19 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchSearchGiphys } from './util/api_util';
+import { receiveSearchGiphys } from './actions/giphy_actions';
 
-window.fetchSearchGiphys = fetchSearchGiphys
+document.addEventListener("DOMContentLoaded", ()=> {
+    const store = configureStore();
+
+ReactDOM.render(<div>{store}</div>, Root)
+}) 
+
+const store = configureStore();
+
+window.store = store;
+window.fetchSearchGiphys = fetchSearchGiphys;
+window.receiveSearchGiphys = receiveSearchGiphys;
+    
+
+
